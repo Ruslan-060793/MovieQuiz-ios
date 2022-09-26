@@ -68,7 +68,6 @@ final class MovieQuizViewController: UIViewController {
     @IBOutlet private var counterLabel: UILabel!
     private var currentQuestionIndex: Int = 0
     private var correctAnswers: Int = 0
-    private static var increment : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,7 +78,7 @@ final class MovieQuizViewController: UIViewController {
     }
     
     
-    @IBAction func noButtonClicked(noButtonClicked sender: UIButton) {
+    @IBAction private func noButtonClicked(noButtonClicked sender: UIButton) {
         if questions[currentQuestionIndex].correctAnswer{
             showAnswerResult(isCorrect: false)
         }else{
@@ -88,7 +87,7 @@ final class MovieQuizViewController: UIViewController {
     }
     
     
-    @IBAction func yesButtonClicked(yesButtonClicked sender: UIButton) {
+    @IBAction private func yesButtonClicked(yesButtonClicked sender: UIButton) {
         if questions[currentQuestionIndex].correctAnswer{
             showAnswerResult(isCorrect: true)
         }else{
