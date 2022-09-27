@@ -69,6 +69,9 @@ final class MovieQuizViewController: UIViewController {
     private var currentQuestionIndex: Int = 0
     private var correctAnswers: Int = 0
     
+    @IBOutlet private weak var yesButton: UIButton!
+    @IBOutlet private weak var noButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
                 
@@ -84,6 +87,8 @@ final class MovieQuizViewController: UIViewController {
         }else{
             showAnswerResult(isCorrect: true)
         }
+        
+        self.isEnableButton(isEnable: false)
     }
     
     
@@ -93,6 +98,8 @@ final class MovieQuizViewController: UIViewController {
         }else{
             showAnswerResult(isCorrect: false)
         }
+        
+        self.isEnableButton(isEnable: false)
     }
     
     private func show(quiz step: QuizStepViewModel) {
@@ -138,22 +145,22 @@ final class MovieQuizViewController: UIViewController {
             correctAnswers += 1
         }
         
-        if isCorrect
-        {
-            imageView.layer.masksToBounds = true
-            imageView.layer.borderWidth = 8
-            imageView.layer.borderColor = UIColor(named: "ypGreen")?.cgColor
-        }else {
-            imageView.layer.masksToBounds = true
-            imageView.layer.borderWidth = 8
-            imageView.layer.borderColor = UIColor(named: "ypRed")?.cgColor
-        }
         
-        
+        imageView.layer.masksToBounds = true
+        imageView.layer.borderWidth = 8
+        imageView.layer.borderColor = isCorrect ? UIColor(named: "YP Green")?.cgColor : UIColor(named: "YP Red")?.cgColor
+       
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.isEnableButton(isEnable: true)
             self.showNextQuestionOrResults()
+            
         }
         
+    }
+    
+    private func isEnableButton(isEnable: Bool){
+        self.yesButton.isEnabled = isEnable
+        self.noButton.isEnabled = isEnable
     }
     
     private func showNextQuestionOrResults() {
@@ -170,6 +177,7 @@ final class MovieQuizViewController: UIViewController {
             let nextQuestion = questions[currentQuestionIndex]
             let viewModel = convert(model: nextQuestion)
             show(quiz: viewModel)
+            
         }
     }
 }

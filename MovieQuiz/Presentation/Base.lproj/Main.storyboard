@@ -26,7 +26,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oUk-nE-5f4" userLabel="Main Stack View">
-                                <rect key="frame" x="20" y="54" width="350" height="746"/>
+                                <rect key="frame" x="20" y="54" width="350" height="756"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="828-bo-7v2">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="23.666666666666668"/>
@@ -44,11 +44,11 @@
                                         </subviews>
                                     </stackView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XCt-90-qgm" userLabel="Preview Image">
-                                        <rect key="frame" x="0.0" y="43.666666666666686" width="350" height="548.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="43.666666666666686" width="350" height="558.33333333333326"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="nlv-mc-jS2">
-                                        <rect key="frame" x="0.0" y="612" width="350" height="54"/>
+                                        <rect key="frame" x="0.0" y="622" width="350" height="54"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Рейтинг этого фильма меньше, чем 5?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHV-g9-Gr4" userLabel="Question Label">
                                                 <rect key="frame" x="0.0" y="0.0" width="350" height="54"/>
@@ -67,7 +67,7 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eO1-Ns-xsT">
-                                        <rect key="frame" x="0.0" y="686" width="350" height="60"/>
+                                        <rect key="frame" x="0.0" y="696" width="350" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAY-0e-he3">
                                                 <rect key="frame" x="0.0" y="0.0" width="165" height="60"/>
@@ -119,14 +119,16 @@
                         <constraints>
                             <constraint firstItem="oUk-nE-5f4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="HsZ-My-WfP"/>
                             <constraint firstAttribute="trailing" secondItem="oUk-nE-5f4" secondAttribute="trailing" constant="20" id="InT-Yh-g9W"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oUk-nE-5f4" secondAttribute="bottom" constant="10" id="TaB-15-Yx3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oUk-nE-5f4" secondAttribute="bottom" id="TaB-15-Yx3"/>
                             <constraint firstItem="oUk-nE-5f4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="hWF-bZ-va9"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="counterLabel" destination="AmL-Zq-7wI" id="Huf-o1-oHI"/>
                         <outlet property="imageView" destination="XCt-90-qgm" id="vdT-mx-jFo"/>
+                        <outlet property="noButton" destination="rAY-0e-he3" id="eao-ke-arF"/>
                         <outlet property="textLabel" destination="XHV-g9-Gr4" id="oLh-oC-Puw"/>
+                        <outlet property="yesButton" destination="grT-xZ-15c" id="PqT-Yg-CpD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -136,7 +138,7 @@
     </scenes>
     <resources>
         <namedColor name="YP Black">
-            <color red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.10199999809265137" green="0.10599999874830246" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="YPBlack">
             <color red="0.10199999809265137" green="0.10599999874830246" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
